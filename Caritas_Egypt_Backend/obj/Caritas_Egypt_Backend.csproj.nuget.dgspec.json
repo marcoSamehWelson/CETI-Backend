@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Marco\\Marco\\Marco\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {}
+    "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {}
   },
   "projects": {
-    "D:\\Marco\\Marco\\Marco\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {
+    "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Marco\\Marco\\Marco\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
+        "projectUniqueName": "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
         "projectName": "Caritas_Egypt_Backend",
-        "projectPath": "D:\\Marco\\Marco\\Marco\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Marco\\Marco\\Marco\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend\\obj\\",
+        "projectPath": "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,6 +78,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.30, 3.1.30]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
