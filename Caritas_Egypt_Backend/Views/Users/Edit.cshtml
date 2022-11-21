@@ -1,0 +1,66 @@
+﻿@using Caritas_Egypt_Backend.Enums
+@model Caritas_Egypt_Backend.Models.User
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<hr />
+<div class="row">
+    <div class="">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserTypeId" class="control-label"></label>
+                <select asp-for="UserTypeId" class="form-control" asp-items="Html.GetEnumSelectList<UserType>()"></select>
+                <span asp-validation-for="UserTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsVerified" /> @Html.DisplayNameFor(model => model.IsVerified)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ChangePassword" /> @Html.DisplayNameFor(model => model.ChangePassword)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtraDetails" class="control-label"></label>
+                <input asp-for="ExtraDetails" class="form-control" />
+                <span asp-validation-for="ExtraDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TempPassword" class="control-label"></label>
+                <input asp-for="TempPassword" class="form-control" />
+                <span asp-validation-for="TempPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastPasswordChage" class="control-label"></label>
+                <input asp-for="LastPasswordChage" class="form-control" />
+                <span asp-validation-for="LastPasswordChage" class="text-danger"></span>
+            </div>
+          
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

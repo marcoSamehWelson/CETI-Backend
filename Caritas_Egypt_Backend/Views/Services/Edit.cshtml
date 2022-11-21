@@ -1,0 +1,56 @@
+﻿@model Caritas_Egypt_Backend.Models.Service
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Service</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrainerInsentive" class="control-label"></label>
+                <input asp-for="TrainerInsentive" class="form-control" />
+                <span asp-validation-for="TrainerInsentive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NightTrainerInsentive" class="control-label"></label>
+                <input asp-for="NightTrainerInsentive" class="form-control" />
+                <span asp-validation-for="NightTrainerInsentive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceTypeId" class="control-label"></label>
+                <input asp-for="ServiceTypeId" class="form-control" />
+                <span asp-validation-for="ServiceTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="languageId" class="control-label"></label>
+                <input asp-for="languageId" class="form-control" />
+                <span asp-validation-for="languageId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SessionTimeId" class="control-label"></label>
+                <input asp-for="SessionTimeId" class="form-control" />
+                <span asp-validation-for="SessionTimeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

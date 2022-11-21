@@ -1,0 +1,99 @@
+﻿@model Caritas_Egypt_Backend.Models.StudentParent
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card card-custom col-md-12">
+ <div class="card-header">
+  <h3 class="card-title">
+   Create Student Parent
+  </h3>
+ </div>
+ <!--begin::Form-->
+
+  <div class="card-body">
+  
+   <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group col-md-4">
+                <label asp-for="FirstName" class="col-form-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="SecondName" class="col-form-label"></label>
+                <input asp-for="SecondName" class="form-control" />
+                <span asp-validation-for="SecondName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="LastName" class="col-form-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="PhoneNumber" class="col-form-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+               <div class="form-group col-md-4">
+                <label asp-for="LandPhoneNumber" class="col-form-label"></label>
+                <input asp-for="LandPhoneNumber" class="form-control" />
+                <span asp-validation-for="LandPhoneNumber" class="text-danger"></span>
+            </div>
+                <div class="form-group col-md-4">
+                <label asp-for="EducationQualification" class="control-label"></label>
+                <input asp-for="EducationQualification" class="form-control" />
+                <span asp-validation-for="EducationQualification" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="JopTitle" class="control-label"></label>
+                <input asp-for="JopTitle" class="form-control" />
+                <span asp-validation-for="JopTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="MotherFirstName" class="control-label"></label>
+                <input asp-for="MotherFirstName" class="form-control" />
+                <span asp-validation-for="MotherFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="MotherSecondName" class="control-label"></label>
+                <input asp-for="MotherSecondName" class="form-control" />
+                <span asp-validation-for="MotherSecondName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="MotherLastName" class="control-label"></label>
+                <input asp-for="MotherLastName" class="form-control" />
+                <span asp-validation-for="MotherLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="MotherPhoneNumber" class="control-label"></label>
+                <input asp-for="MotherPhoneNumber" class="form-control" />
+                <span asp-validation-for="MotherPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="MotherEducationQualification" class="control-label"></label>
+                <input asp-for="MotherEducationQualification" class="form-control" />
+                <span asp-validation-for="MotherEducationQualification" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="MotherJopTitle" class="control-label"></label>
+                <input asp-for="MotherJopTitle" class="form-control" />
+                <span asp-validation-for="MotherJopTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+   </div>
+
+  </div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

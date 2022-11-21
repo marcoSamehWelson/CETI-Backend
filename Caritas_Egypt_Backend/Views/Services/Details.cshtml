@@ -1,0 +1,55 @@
+﻿@model Caritas_Egypt_Backend.Models.Service
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Service</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TrainerInsentive)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrainerInsentive)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NightTrainerInsentive)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NightTrainerInsentive)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ServiceTypeId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ServiceTypeId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.languageId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.languageId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SessionTimeId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SessionTimeId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

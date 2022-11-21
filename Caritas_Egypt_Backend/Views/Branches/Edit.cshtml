@@ -1,0 +1,45 @@
+﻿@model Caritas_Egypt_Backend.Models.Branch
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card card-custom col-md-12">
+ <div class="card-header">
+  <h3 class="card-title">
+   Edit  Branch
+  </h3>
+ </div>
+ <!--begin::Form-->
+
+  <div class="card-body">
+              
+   <form asp-action="Edit">
+       <input type="hidden" asp-for="Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group row">
+                <label asp-for="Name" class="col-form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+    
+      
+            
+           
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-primary" />
+            </div>
+        </form>
+   </div>
+
+  </div>
+ 
+
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

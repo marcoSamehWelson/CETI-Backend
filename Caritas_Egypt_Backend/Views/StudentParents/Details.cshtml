@@ -1,0 +1,103 @@
+﻿@model Caritas_Egypt_Backend.Models.StudentParent
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>StudentParent</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SecondName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SecondName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LandPhoneNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LandPhoneNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EducationQualification)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EducationQualification)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JopTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JopTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MotherFirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MotherFirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MotherSecondName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MotherSecondName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MotherLastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MotherLastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MotherPhoneNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MotherPhoneNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MotherEducationQualification)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MotherEducationQualification)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MotherJopTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MotherJopTitle)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

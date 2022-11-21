@@ -1,0 +1,71 @@
+﻿@model Caritas_Egypt_Backend.Models.User
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserTypeId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserTypeId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsVerified)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsVerified)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ChangePassword)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ChangePassword)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtraDetails)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExtraDetails)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TempPassword)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TempPassword)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastPasswordChage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastPasswordChage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastPasswordChangeBy)
+        </dt>
+       
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

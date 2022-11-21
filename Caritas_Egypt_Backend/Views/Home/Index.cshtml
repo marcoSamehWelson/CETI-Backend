@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Home Page";
+}
+								<div class="card card-custom">
+									<div class="card-header flex-wrap border-0 pt-6 pb-0">
+										<div class="card-title">
+										</div>
+									</div>
+									<div class="card-body">
+										<!--begin: Search Form-->
+										<!--begin: Datatable-->
+		@*samuel*@
+		@*@if (Context.Session.GetInt32("UserType") == 3)
+		{*@
+			<a href="/Users/index" class="btn btn-primary btn-lg btn-block">Users</a>
+			@*<a href="/StudentParents/Index" class="btn btn-success btn-lg btn-block">Student Parents</a>*@
+			<a href="/CoursePrices/Index" class="btn btn-primary btn-lg btn-block">Course Prices</a>
+			<a href="/Languages/Index" class="btn btn-primary btn-lg btn-block">Languages</a>
+			<a href="/SessionTimes/Index" class="btn btn-primary btn-lg btn-block">Session Times </a>
+			<a href="/Branches/Index" class="btn btn-primary btn-lg btn-block">Branch</a>
+			<a  href="/Services/Index" class="btn btn-success btn-lg btn-block">Services</a>
+			<a  href="/ServiceTypes/Index" class="btn btn-success btn-lg btn-block">Service Types</a>
+		@*}
+		@if(Context.Session.GetInt32("UserType")==1){*@
+<a href="/TypeOfDisabilities/Index" class="btn btn-primary btn-lg btn-block">Type Of Disabilities</a>
+<a href="/StudentNationalities/Index" class="btn btn-success btn-lg btn-block">Student Nationalities</a>
+@*	}
+		else if (Context.Session.GetInt32("UserType") == 2){*@
+<a href="/Trainers/Index" class="btn btn-primary btn-lg btn-block">Trainers</a>
+<a href="/Students/Index" class="btn btn-success btn-lg btn-block">Students</a>
+		@*}*@
+
+	 </div>
+	</div>
