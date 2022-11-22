@@ -15,8 +15,12 @@
 													<span class="card-label font-weight-bolder text-dark">Branches</span>
 													<span class="text-muted mt-3 font-weight-bold font-size-sm"></span>
 												</h3>
-												<div class="card-toolbar">
-													    <a class="btn btn-info font-weight-bolder font-size-sm mr-3" asp-action="Create">Create</a>
+												<div class="card-toolbar" style="gap: 8px">
+													  <form method="post" asp-action="Index" style="display:flex; gap:8px;">
+												<input type="text" name="name" value="" />
+												<input type="submit" value="Search" class="btn btn-info font-weight-bolder font-size-sm w-100" />
+													 </form>
+													<a class="btn btn-info font-weight-bolder font-size-sm mr-3" asp-action="Create">Create</a>
 												</div>
 											</div>
 											<!--end::Header-->

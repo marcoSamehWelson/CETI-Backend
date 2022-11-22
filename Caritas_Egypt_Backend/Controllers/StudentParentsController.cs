@@ -19,9 +19,18 @@ namespace Caritas_Egypt_Backend.Controllers
         }
 
         // GET: StudentParents
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? name)
         {
-            return View(await _context.StudentParents.ToListAsync());
+            if (name != null)
+            {
+
+                return View(await _context.StudentParents.Where(s => s.FirstName == name || s.SecondName == name).ToListAsync());
+
+            }
+            else
+            {
+                return View(await _context.StudentParents.ToListAsync());
+            }
         }
 
         // GET: StudentParents/Details/5
@@ -41,7 +50,7 @@ namespace Caritas_Egypt_Backend.Controllers
 
             return View(studentParent);
         }
-
+       
         // GET: StudentParents/Create
         public IActionResult Create()
         {
