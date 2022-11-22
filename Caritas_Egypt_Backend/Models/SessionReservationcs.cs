@@ -21,8 +21,7 @@ namespace Caritas_Egypt_Backend.Models
         public Student student { get; set; }
         public Guid? TrainerId { get; set; }
         public Trainer trainer { get; set; }
-        [Display(Name = "السعر")]
-        public string Price { get; set; }
+      public  DateTime SessionDateTime { get; set; }
 
     }
 }
