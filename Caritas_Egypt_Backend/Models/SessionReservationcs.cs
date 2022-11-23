@@ -5,9 +5,9 @@ using System;
 namespace Caritas_Egypt_Backend.Models
 {
  
-    public class SessionReservationcs
+    public class SessionReservations
     {
-        public SessionReservationcs()
+        public SessionReservations()
         {
             Id = Guid.NewGuid();
         }
@@ -17,7 +17,7 @@ namespace Caritas_Egypt_Backend.Models
 
         public Guid? coursePriceId { get; set; }
         public CoursePrice coursePrice { get; set; }
-        public Guid? StudentId { get; set; }
+        public int? StudentId { get; set; }
         public Student student { get; set; }
         public Guid? TrainerId { get; set; }
         public Trainer trainer { get; set; }
