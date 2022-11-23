@@ -646,3 +646,8 @@ D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Caritas_Egypt_Backend.dll
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Caritas_Egypt_Backend.pdb
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Caritas_Egypt_Backend.genruntimeconfig.cache
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\SessionReservationcs\Create.cshtml.g.cs
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\SessionReservationcs\Delete.cshtml.g.cs
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\SessionReservationcs\Details.cshtml.g.cs
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\SessionReservationcs\Edit.cshtml.g.cs
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\SessionReservationcs\Index.cshtml.g.cs
