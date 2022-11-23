@@ -18,8 +18,8 @@
 										<!--begin: Search Form-->
 										<!--begin: Datatable-->
 		@*samuel*@
-		@*@if (Context.Session.GetInt32("UserType") == 3)
-		{*@
+		@if (Context.Session.GetInt32("UserType") != 3)
+		{
 			<a href="/Users/index" class="btn btn-primary btn-lg btn-block">Users</a>
 			@*<a href="/StudentParents/Index" class="btn btn-success btn-lg btn-block">Student Parents</a>*@
 			<a href="/CoursePrices/Index" class="btn btn-primary btn-lg btn-block">Course Prices</a>
@@ -28,13 +28,14 @@
 			<a href="/Branches/Index" class="btn btn-primary btn-lg btn-block">Branch</a>
 			<a  href="/Services/Index" class="btn btn-success btn-lg btn-block">Services</a>
 			<a  href="/ServiceTypes/Index" class="btn btn-success btn-lg btn-block">Service Types</a>
-		@*}
-		@if(Context.Session.GetInt32("UserType")==1){*@
-<a href="/TypeOfDisabilities/Index" class="btn btn-primary btn-lg btn-block">Type Of Disabilities</a>
-<a href="/StudentNationalities/Index" class="btn btn-success btn-lg btn-block">Student Nationalities</a>
-@*	}
-		else if (Context.Session.GetInt32("UserType") == 2){*@
-<a href="/Trainers/Index" class="btn btn-primary btn-lg btn-block">Trainers</a>
+			<a href="/Trainers/Index" class="btn btn-primary btn-lg btn-block">Trainers</a>
+			<a href="/TypeOfDisabilities/Index" class="btn btn-primary btn-lg btn-block">Type Of Disabilities</a>
+			<a href="/StudentNationalities/Index" class="btn btn-success btn-lg btn-block">Student Nationalities</a>
+		}
+		@*	@if(Context.Session.GetInt32("UserType")==1){*@
+
+		@*	}*@
+		@*else if (Context.Session.GetInt32("UserType") == 2){*@
 <a href="/Students/Index" class="btn btn-success btn-lg btn-block">Students</a>
 <a href="/SessionReservationcs/Index" class="btn btn-success btn-lg btn-block">Session Reservations</a>
 		@*}*@
