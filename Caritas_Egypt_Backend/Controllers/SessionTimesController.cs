@@ -19,9 +19,18 @@ namespace Caritas_Egypt_Backend.Controllers
         }
 
         // GET: SessionTimes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? name)
         {
-            return View(await _context.SessionTimes.ToListAsync());
+            if (name != null)
+            {
+
+                return View(await _context.SessionTimes.Where(s => s.Name == name).ToListAsync());
+
+            }
+            else
+            {
+                return View(await _context.SessionTimes.ToListAsync());
+            }
         }
 
         // GET: SessionTimes/Details/5

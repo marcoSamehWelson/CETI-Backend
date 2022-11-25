@@ -19,9 +19,18 @@ namespace Caritas_Egypt_Backend.Controllers
         }
 
         // GET: TypeOfDisabilities
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? name)
         {
-            return View(await _context.TypeOfDisabilitys.ToListAsync());
+            if (name != null)
+            {
+
+                return View(await _context.TypeOfDisabilitys.Where(s => s.Name == name).ToListAsync());
+
+            }
+            else
+            {
+                return View(await _context.TypeOfDisabilitys.ToListAsync());
+            }
         }
 
         // GET: TypeOfDisabilities/Details/5

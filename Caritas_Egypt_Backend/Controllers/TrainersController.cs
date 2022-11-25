@@ -19,9 +19,18 @@ namespace Caritas_Egypt_Backend.Controllers
         }
 
         // GET: Trainers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? name)
         {
-            return View(await _context.Trainers.ToListAsync());
+            if (name != null)
+            {
+
+                return View(await _context.Trainers.Where(s => s.FirstName == name || s.SecondName == name).ToListAsync());
+
+            }
+            else
+            {
+                return View(await _context.Trainers.ToListAsync());
+            }
         }
 
         // GET: Trainers/Details/5
