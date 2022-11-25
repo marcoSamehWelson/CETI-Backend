@@ -19,11 +19,21 @@ namespace Caritas_Egypt_Backend.Controllers
         }
 
         // GET: CoursePrices
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? name)
         {
-            var cETICaretasEgyptContext = _context.CoursePrices.Include(c => c.branch).Include(c => c.service).Include(c => c.studentNationality);
-            return View(await cETICaretasEgyptContext.ToListAsync());
+            if (name != null)
+            {
+
+                return View(await _context.CoursePrices.Where(s => s.service.Name == name).ToListAsync());
+
+            }
+            else
+            {
+                var cETICaretasEgyptContext = _context.CoursePrices.Include(c => c.branch).Include(c => c.service).Include(c => c.studentNationality);
+                return View(await cETICaretasEgyptContext.ToListAsync());
+            }
         }
+
 
         // GET: CoursePrices/Details/5
         public async Task<IActionResult> Details(Guid? id)

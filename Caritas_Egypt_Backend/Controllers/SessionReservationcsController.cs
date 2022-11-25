@@ -19,10 +19,19 @@ namespace Caritas_Egypt_Backend.Controllers
         }
 
         // GET: SessionReservationcs
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? studentname)
         {
-            var cETICaretasEgyptContext = _context.SessionReservation.Include(s => s.coursePrice).Include(s => s.trainer).Include(s => s.student);
-            return View(await cETICaretasEgyptContext.ToListAsync());
+            if (studentname != null)
+            {
+
+                return View(await _context.SessionReservation.Where(s => s.student.Name == studentname).ToListAsync());
+
+            }
+            else
+            {
+                var cETICaretasEgyptContext = _context.SessionReservation.Include(s => s.coursePrice).Include(s => s.trainer).Include(s => s.student);
+                return View(await cETICaretasEgyptContext.ToListAsync());
+            }
         }
 
         // GET: SessionReservationcs/Details/5

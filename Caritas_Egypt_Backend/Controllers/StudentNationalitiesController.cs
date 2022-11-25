@@ -19,9 +19,18 @@ namespace Caritas_Egypt_Backend.Controllers
         }
 
         // GET: StudentNationalities
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? name)
         {
-            return View(await _context.StudentNationalities.ToListAsync());
+            if (name != null)
+            {
+
+                return View(await _context.StudentNationalities.Where(s => s.Name == name).ToListAsync());
+
+            }
+            else
+            {
+                return View(await _context.StudentNationalities.ToListAsync());
+            }
         }
 
         // GET: StudentNationalities/Details/5

@@ -19,9 +19,18 @@ namespace Caritas_Egypt_Backend.Controllers
         }
 
         // GET: ServiceTypes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? name)
         {
-            return View(await _context.ServiceTypes.ToListAsync());
+            if (name != null)
+            {
+
+                return View(await _context.ServiceTypes.Where(s => s.Name == name).ToListAsync());
+
+            }
+            else
+            {
+                return View(await _context.ServiceTypes.ToListAsync());
+            }
         }
 
         // GET: ServiceTypes/Details/5
