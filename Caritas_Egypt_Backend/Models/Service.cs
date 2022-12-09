@@ -11,9 +11,7 @@ namespace Caritas_Egypt_Backend.Models
         public Service()
         {
             Id = Guid.NewGuid();
-            servicesType = new HashSet<ServiceType>();
-            sessionTime = new HashSet<SessionTime>();
-            language = new HashSet<Language>();
+         
         }
         [Required]
         [Key]
@@ -27,14 +25,14 @@ namespace Caritas_Egypt_Backend.Models
         [Display(Name = "قيمة المكافاة للاخصائيين العاملين بالمركز خدمة")]
         public string NightTrainerInsentive { get; set; }
         public Guid ServiceTypeId { get; set; }
+        public ServiceType servicesType { get; set; }
 
-        public virtual ICollection<ServiceType> servicesType { get; set; }
         public Guid languageId { get; set; }
+        public Language language { get; set; }
 
-        public virtual ICollection<Language> language { get; set; }
         public Guid SessionTimeId { get; set; }
+        public SessionTime sessionTime { get; set; }
 
-        public virtual ICollection<SessionTime> sessionTime { get; set; }
 
     }
 }

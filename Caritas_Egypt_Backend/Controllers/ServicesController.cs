@@ -24,12 +24,12 @@ namespace Caritas_Egypt_Backend.Controllers
             if (name != null)
             {
 
-                return View(await _context.Services.Where(s => s.Name == name).ToListAsync());
+                return View(await _context.Services.Include(s => s.servicesType).Include(s => s.language).Include(s => s.sessionTime).Where(s => s.Name == name).ToListAsync());
 
             }
             else
             {
-                return View(await _context.Services.ToListAsync());
+                return View(await _context.Services.Include(s => s.servicesType).Include(s=>s.language).Include(s =>s.sessionTime).ToListAsync());
             }
         }
 
@@ -41,7 +41,7 @@ namespace Caritas_Egypt_Backend.Controllers
                 return NotFound();
             }
 
-            var service = await _context.Services
+            var service = await _context.Services.Include(s => s.servicesType).Include(s => s.language).Include(s => s.sessionTime)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (service == null)
             {

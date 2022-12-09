@@ -24,7 +24,7 @@ namespace Caritas_Egypt_Backend.Controllers
             if (name != null)
             {
 
-                return View(await _context.CoursePrices.Where(s => s.service.Name == name).ToListAsync());
+                return View(await _context.CoursePrices.Include(c => c.branch).Include(c => c.service).Include(c => c.studentNationality).Where(s => s.service.Name == name).ToListAsync());
 
             }
             else

@@ -30,13 +30,13 @@
                 @Html.DisplayNameFor(model => model.NightTrainerInsentive)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ServiceTypeId)
+                @Html.DisplayNameFor(model => model.servicesType)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.languageId)
+                @Html.DisplayNameFor(model => model.language)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SessionTimeId)
+                @Html.DisplayNameFor(model => model.sessionTime)
             </th>
             <th></th>
         </tr>
@@ -54,14 +54,15 @@
                 @Html.DisplayFor(modelItem => item.NightTrainerInsentive)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ServiceTypeId)
+                @Html.DisplayFor(modelItem => item.servicesType.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.languageId)
+                    @Html.DisplayFor(modelItem => item.language.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SessionTimeId)
+                    @Html.DisplayFor(modelItem => item.sessionTime.Name)
             </td>
+                
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

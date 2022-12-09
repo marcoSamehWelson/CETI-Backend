@@ -69,6 +69,22 @@ namespace Caritas_Egypt_Backend.Migrations
                     b.ToTable("CoursePrices");
                 });
 
+            modelBuilder.Entity("Caritas_Egypt_Backend.Models.DiscriptionList", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DiscriptionLists");
+                });
+
             modelBuilder.Entity("Caritas_Egypt_Backend.Models.Language", b =>
                 {
                     b.Property<Guid>("Id")
@@ -80,14 +96,80 @@ namespace Caritas_Egypt_Backend.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<Guid?>("ServiceId")
+                    b.HasKey("Id");
+
+                    b.ToTable("Language");
+                });
+
+            modelBuilder.Entity("Caritas_Egypt_Backend.Models.ProgramsCategoryFE", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Descreption")
+                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(5000);
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("img")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ServiceId");
+                    b.ToTable("ProgramsCategoryFEs");
+                });
 
-                    b.ToTable("Language");
+            modelBuilder.Entity("Caritas_Egypt_Backend.Models.ProgramsFE", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Descreption")
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.Property<Guid?>("ProgramsCategoryFEId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("img")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProgramsCategoryFEId");
+
+                    b.ToTable("ProgramsFEs");
+                });
+
+            modelBuilder.Entity("Caritas_Egypt_Backend.Models.ProjectsFE", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Paragraph")
+                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(5000);
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProjectsFEs");
                 });
 
             modelBuilder.Entity("Caritas_Egypt_Backend.Models.Service", b =>
@@ -121,7 +203,13 @@ namespace Caritas_Egypt_Backend.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ServiceTypeId");
+
+                    b.HasIndex("SessionTimeId");
+
                     b.HasIndex("TrainerId");
+
+                    b.HasIndex("languageId");
 
                     b.ToTable("Service");
                 });
@@ -137,12 +225,7 @@ namespace Caritas_Egypt_Backend.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<Guid?>("ServiceId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ServiceId");
 
                     b.ToTable("ServiceType");
                 });
@@ -187,12 +270,7 @@ namespace Caritas_Egypt_Backend.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<Guid?>("ServiceId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ServiceId");
 
                     b.ToTable("SessionTime");
                 });
@@ -465,6 +543,38 @@ namespace Caritas_Egypt_Backend.Migrations
                     b.ToTable("Trainer");
                 });
 
+            modelBuilder.Entity("Caritas_Egypt_Backend.Models.TrainingCourses", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Descreption")
+                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(5000);
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<Guid?>("branchId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("img")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TrainingCoursess");
+                });
+
             modelBuilder.Entity("Caritas_Egypt_Backend.Models.TypeOfDisability", b =>
                 {
                     b.Property<Guid>("Id")
@@ -544,25 +654,36 @@ namespace Caritas_Egypt_Backend.Migrations
                         .HasForeignKey("StudentNationalityId");
                 });
 
-            modelBuilder.Entity("Caritas_Egypt_Backend.Models.Language", b =>
+            modelBuilder.Entity("Caritas_Egypt_Backend.Models.ProgramsFE", b =>
                 {
-                    b.HasOne("Caritas_Egypt_Backend.Models.Service", null)
-                        .WithMany("language")
-                        .HasForeignKey("ServiceId");
+                    b.HasOne("Caritas_Egypt_Backend.Models.ProgramsCategoryFE", "programsCategoryFE")
+                        .WithMany()
+                        .HasForeignKey("ProgramsCategoryFEId");
                 });
 
             modelBuilder.Entity("Caritas_Egypt_Backend.Models.Service", b =>
                 {
+                    b.HasOne("Caritas_Egypt_Backend.Models.ServiceType", "servicesType")
+                        .WithMany()
+                        .HasForeignKey("ServiceTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Caritas_Egypt_Backend.Models.SessionTime", "sessionTime")
+                        .WithMany()
+                        .HasForeignKey("SessionTimeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Caritas_Egypt_Backend.Models.Trainer", null)
                         .WithMany("Services")
                         .HasForeignKey("TrainerId");
-                });
 
-            modelBuilder.Entity("Caritas_Egypt_Backend.Models.ServiceType", b =>
-                {
-                    b.HasOne("Caritas_Egypt_Backend.Models.Service", null)
-                        .WithMany("servicesType")
-                        .HasForeignKey("ServiceId");
+                    b.HasOne("Caritas_Egypt_Backend.Models.Language", "language")
+                        .WithMany()
+                        .HasForeignKey("languageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Caritas_Egypt_Backend.Models.SessionReservations", b =>
@@ -578,13 +699,6 @@ namespace Caritas_Egypt_Backend.Migrations
                     b.HasOne("Caritas_Egypt_Backend.Models.CoursePrice", "coursePrice")
                         .WithMany()
                         .HasForeignKey("coursePriceId");
-                });
-
-            modelBuilder.Entity("Caritas_Egypt_Backend.Models.SessionTime", b =>
-                {
-                    b.HasOne("Caritas_Egypt_Backend.Models.Service", null)
-                        .WithMany("sessionTime")
-                        .HasForeignKey("ServiceId");
                 });
 
             modelBuilder.Entity("Caritas_Egypt_Backend.Models.Student", b =>

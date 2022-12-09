@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5daS5GPsu5O5Rd4FCGbh23ZLSEdgyACLgDWMBv1COXMikxlAA3NZ11JFY7Hg5Lt30XOnn5S6R/23HuvfeaIr1w==",
+  "dgSpecHash": "iGuAZQ7xPhUfkR3C6Jk9vdAWcKmeaI3TxK0XPvTjSRD9yiTspf9QzA9ppCxEI7MGG7ZA/u0Alrjgktw5VsA6YA==",
   "success": true,
   "projectFilePath": "F:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\petoo\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
+    "C:\\Users\\petoo\\.nuget\\packages\\itextsharp\\5.5.13.3\\itextsharp.5.5.13.3.nupkg.sha512",
     "C:\\Users\\petoo\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.21\\microsoft.aspnetcore.authorization.3.1.21.nupkg.sha512",
     "C:\\Users\\petoo\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.21\\microsoft.aspnetcore.components.3.1.21.nupkg.sha512",
     "C:\\Users\\petoo\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.21\\microsoft.aspnetcore.components.analyzers.3.1.21.nupkg.sha512",
@@ -172,5 +174,32 @@
     "C:\\Users\\petoo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\petoo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file F:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BouncyCastle 1.8.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'iTextSharp 5.5.13.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "iTextSharp",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
