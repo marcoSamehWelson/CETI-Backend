@@ -35,6 +35,7 @@ namespace Caritas_Egypt_Backend.Controllers
                 //await _context.SaveChangesAsync();
                 if (UserExists(user.Email, user.TempPassword))
                 {
+                    //
                     // _context.User
                     usersession = _context.User.Where(e => e.Email == user.Email && e.TempPassword == user.TempPassword).FirstOrDefault();
                     HttpContext.Session.SetInt32("UserType",(int) usersession.UserTypeId); 
