@@ -24,7 +24,7 @@ namespace Caritas_Egypt_Backend.Controllers
             if (studentname != null)
             {
 
-                return View(await _context.SessionReservation.Where(s => s.student.Name == studentname).ToListAsync());
+                return View(await _context.SessionReservation.Include(s => s.coursePrice).Include(s => s.trainer).Include(s => s.student).Where(s => s.student.Name == studentname).ToListAsync());
 
             }
             else

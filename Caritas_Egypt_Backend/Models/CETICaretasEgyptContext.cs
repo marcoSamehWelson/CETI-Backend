@@ -31,7 +31,12 @@ namespace Caritas_Egypt_Backend.Models
         public virtual DbSet<SessionTime> SessionTimes { get; set; }
         public virtual DbSet<ServiceType> ServiceTypes { get; set; }
         public virtual DbSet<SessionReservations> SessionReservation { get; set; }
-
+        public virtual DbSet<ProgramsCategoryFE> ProgramsCategoryFEs { get; set; }
+        public virtual DbSet<ProgramsFE> ProgramsFEs { get; set; }
+        public virtual DbSet<ProjectsFE> ProjectsFEs { get; set; }
+        public virtual DbSet<DiscriptionList> DiscriptionLists { get; set; }
+        public virtual DbSet<TrainingCourses> TrainingCoursess { get; set; }
+        
         protected void OnModuleCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
