@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {}
+    "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {}
   },
   "projects": {
-    "F:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {
+    "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
+        "projectUniqueName": "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
         "projectName": "Caritas_Egypt_Backend",
-        "projectPath": "F:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
-        "packagesPath": "C:\\Users\\petoo\\.nuget\\packages\\",
-        "outputPath": "F:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\obj\\",
+        "projectPath": "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\petoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +77,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -93,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

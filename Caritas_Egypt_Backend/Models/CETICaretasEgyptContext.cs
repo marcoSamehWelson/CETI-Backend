@@ -32,9 +32,9 @@ namespace Caritas_Egypt_Backend.Models
         public virtual DbSet<ServiceType> ServiceTypes { get; set; }
         public virtual DbSet<SessionReservations> SessionReservation { get; set; }
         public virtual DbSet<ProgramsCategoryFE> ProgramsCategoryFEs { get; set; }
+        public virtual DbSet<ProjectsCategoryFE> ProjectsCategoryFEs { get; set; }
         public virtual DbSet<ActivitiesAndEventsFE> ActivitiesAndEventsFEs { get; set; }
         public virtual DbSet<OurPartnersFE> OurPartnersFEs { get; set; }
-
         public virtual DbSet<ProgramsFE> ProgramsFEs { get; set; }
         public virtual DbSet<ProjectsFE> ProjectsFEs { get; set; }
         public virtual DbSet<DiscriptionList> DiscriptionLists { get; set; }

@@ -2,7 +2,6 @@
 using System.Xml.Linq;
 using System;
 using System.Collections.Generic;
-using iTextSharp.text.pdf.qrcode;
 
 namespace Caritas_Egypt_Backend.Models
 {
