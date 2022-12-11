@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Caritas_Egypt_Backend.Models.ProjectsFE>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tittle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paragraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Objectives)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mainactivities)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Partners)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetgrouporBeneficiaries)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.projectsCategoryFE)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tittle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paragraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Objectives)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mainactivities)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Partners)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetgrouporBeneficiaries)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.projectsCategoryFE.Tittle)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

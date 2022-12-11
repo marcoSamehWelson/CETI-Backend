@@ -494,3 +494,13 @@ F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\n
 F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Caritas_Egypt_Backend.dll
 F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Caritas_Egypt_Backend.pdb
 F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Caritas_Egypt_Backend.genruntimeconfig.cache
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\ProjectsCategoryFEs\Create.cshtml.g.cs
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\ProjectsCategoryFEs\Delete.cshtml.g.cs
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\ProjectsCategoryFEs\Details.cshtml.g.cs
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\ProjectsCategoryFEs\Edit.cshtml.g.cs
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\ProjectsCategoryFEs\Index.cshtml.g.cs
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\ProjectsFEs\Create.cshtml.g.cs
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\ProjectsFEs\Delete.cshtml.g.cs
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\ProjectsFEs\Details.cshtml.g.cs
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\ProjectsFEs\Edit.cshtml.g.cs
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\ProjectsFEs\Index.cshtml.g.cs
