@@ -69,7 +69,7 @@ namespace Caritas_Egypt_Backend.Controllers
                 user.LastPasswordChage = DateTime.Now;
                 user.LastPasswordChangeBy = Guid.NewGuid();
 
-                _context.Add(user);
+                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }

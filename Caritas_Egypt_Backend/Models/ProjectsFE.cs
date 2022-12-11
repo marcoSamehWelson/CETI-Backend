@@ -22,6 +22,9 @@ namespace Caritas_Egypt_Backend.Models
         [StringLength(5000)]
         [Display(Name = "Paragraph")]
         public string Paragraph { get; set; }
-       
+
+
+        public Guid? ProjectsCategoryFEId { get; set; }
+        public ProjectsCategoryFE projectsCategoryFE { get; set; }
     }
 }

@@ -198,6 +198,29 @@ namespace Caritas_Egypt_Backend.Migrations
                     b.ToTable("ProgramsFEs");
                 });
 
+            modelBuilder.Entity("Caritas_Egypt_Backend.Models.ProjectsCategoryFE", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Descreption")
+                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(5000);
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("img")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProjectsCategoryFEs");
+                });
+
             modelBuilder.Entity("Caritas_Egypt_Backend.Models.ProjectsFE", b =>
                 {
                     b.Property<Guid>("Id")
@@ -208,12 +231,17 @@ namespace Caritas_Egypt_Backend.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasMaxLength(5000);
 
+                    b.Property<Guid?>("ProjectsCategoryFEId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Tittle")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProjectsCategoryFEId");
 
                     b.ToTable("ProjectsFEs");
                 });
@@ -707,6 +735,13 @@ namespace Caritas_Egypt_Backend.Migrations
                     b.HasOne("Caritas_Egypt_Backend.Models.ProgramsCategoryFE", "programsCategoryFE")
                         .WithMany()
                         .HasForeignKey("ProgramsCategoryFEId");
+                });
+
+            modelBuilder.Entity("Caritas_Egypt_Backend.Models.ProjectsFE", b =>
+                {
+                    b.HasOne("Caritas_Egypt_Backend.Models.ProjectsCategoryFE", "projectsCategoryFE")
+                        .WithMany()
+                        .HasForeignKey("ProjectsCategoryFEId");
                 });
 
             modelBuilder.Entity("Caritas_Egypt_Backend.Models.Service", b =>
