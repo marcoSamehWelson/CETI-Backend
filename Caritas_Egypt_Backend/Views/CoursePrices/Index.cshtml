@@ -4,27 +4,22 @@
 	ViewData["Title"] = "Index";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<<<<<<< HEAD
 
-<h1>Index</h1>
-<div class="card-header  border-0 py-5">
-												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label font-weight-bolder text-dark">Students</span>
-													<span class="text-muted mt-3 font-weight-bold font-size-sm"></span>
-												</h3>
-												<div class="card-toolbar" style="gap: 8px">
+
+<h1>Course Price</h1>
+<div class="card-toolbar" style="gap: 8px; float:right;" >
 					<form method="post" asp-action="Index" style="display:flex; gap:8px;">
 						<input type="text" name="name" value="" />
-						<input type="submit" value="Search" class="btn btn-info font-weight-bolder font-size-sm w-100" />
-													 </form>
+						<input type="submit" value="Search" class="btn btn-info font-weight-bolder w-100" />
+																	<a class="btn btn-info font-weight-bolder font-size-sm mr-3" asp-action="Create">Create</a>
+
+                    </form>
 
 
-					<a class="btn btn-info font-weight-bolder font-size-sm mr-3" asp-action="Create">Create</a>
 
 													
 													@*<a href="#" class="btn btn-danger font-weight-bolder font-size-sm">Create</a>*@
 												</div>
-											</div>
 @*<p>
     <a asp-action="Create">Create New</a>
 </p>*@
@@ -70,9 +65,9 @@
 }
     </tbody>
 </table>
-=======
+
 <!--begin::Row-->
-<div class="row">
+@*<div class="row">
 	<div class="col-lg-12 col-xxl-12">
 		<!--begin::Advance Table Widget 9-->
 		<div class="card card-custom card-stretch gutter-b">
@@ -153,4 +148,4 @@
 	</div>
 </div>
 <!--end::Row-->
->>>>>>> 1e9ca38cde84ce15b513bd425beef71f3a05bd2c
+>>>>>>> 1e9ca38cde84ce15b513bd425beef71f3a05bd2c*@
