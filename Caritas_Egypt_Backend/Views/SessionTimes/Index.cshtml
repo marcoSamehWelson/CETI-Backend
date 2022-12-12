@@ -5,18 +5,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
-<div class="card-toolbar" style="gap: 8px;float: right;">
+<h1>Session Times</h1>
+<div class="card-toolbar" style="gap: 8px; float:right;" >
 					<form method="post" asp-action="Index" style="display:flex; gap:8px;">
 						<input type="text" name="name" value="" />
-						<input type="submit" value="Search" class="btn btn-info font-weight-bolder" />
-													 </form>
+						<input type="submit" value="Search" class="btn btn-info font-weight-bolder w-100" />
+																	<a class="btn btn-info font-weight-bolder font-size-sm mr-3" asp-action="Create">Create</a>
+
+                    </form>
 
 
-</div>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
+													
+													@*<a href="#" class="btn btn-danger font-weight-bolder font-size-sm">Create</a>*@
+												</div>
+
 <table class="table">
     <thead>
         <tr>

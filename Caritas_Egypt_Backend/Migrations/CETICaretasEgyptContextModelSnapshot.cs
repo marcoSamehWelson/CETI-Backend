@@ -227,17 +227,35 @@ namespace Caritas_Egypt_Backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Location")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mainactivities")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Objectives")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Paragraph")
                         .HasColumnType("nvarchar(max)")
                         .HasMaxLength(5000);
 
+                    b.Property<string>("Partners")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid?>("ProjectsCategoryFEId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("TargetgrouporBeneficiaries")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Tittle")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
+
+                    b.Property<string>("Year")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
