@@ -30,6 +30,8 @@ namespace Caritas_Egypt_Backend.Models
         [Display(Name = "رقم التليفون ")]
 
         public int PhoneNumber { get; set; }
+        public string Fullname => string.Format("{0} {1} {2}", FirstName, SecondName,LastName);
+
         [Display(Name = "الرقم القومى")]
         public Int16 NationalID { get; set; }
         [Display(Name = "هل يقدم خدمات مسائيه؟  ")]

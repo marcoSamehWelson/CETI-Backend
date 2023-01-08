@@ -59,7 +59,7 @@ namespace Caritas_Egypt_Backend.Controllers
         public IActionResult Create()
         {
             ViewData["coursePriceId"] = new SelectList(_context.CoursePrices, "Id", "Name");
-            ViewData["TrainerId"] = new SelectList(_context.Trainers, "Id", "Name");
+            ViewData["TrainerId"] = new SelectList(_context.Trainers, "Id", "FirstName");
             ViewData["StudentId"] = new SelectList(_context.Students, "ID", "Name");
             return View();
         }
@@ -79,7 +79,7 @@ namespace Caritas_Egypt_Backend.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["coursePriceId"] = new SelectList(_context.CoursePrices, "Id", "Name", sessionReservationcs.coursePriceId);
-            ViewData["TrainerId"] = new SelectList(_context.Trainers, "Id", "Name", sessionReservationcs.TrainerId);
+            ViewData["TrainerId"] = new SelectList(_context.Trainers, "Id", "FirstName", sessionReservationcs.TrainerId);
             ViewData["StudentId"] = new SelectList(_context.Students, "ID", "Name", sessionReservationcs.StudentId);
 
             return View(sessionReservationcs);
@@ -99,7 +99,7 @@ namespace Caritas_Egypt_Backend.Controllers
                 return NotFound();
             }
             ViewData["coursePriceId"] = new SelectList(_context.CoursePrices, "Id", "Name", sessionReservationcs.coursePriceId);
-            ViewData["TrainerId"] = new SelectList(_context.Trainers, "Id", "Name", sessionReservationcs.TrainerId);
+            ViewData["TrainerId"] = new SelectList(_context.Trainers, "Id", "FirstName", sessionReservationcs.TrainerId);
             ViewData["StudentId"] = new SelectList(_context.Students, "ID", "Name", sessionReservationcs.StudentId);
 
             return View(sessionReservationcs);
@@ -138,7 +138,7 @@ namespace Caritas_Egypt_Backend.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["coursePriceId"] = new SelectList(_context.CoursePrices, "Id", "Name", sessionReservationcs.coursePriceId);
-            ViewData["TrainerId"] = new SelectList(_context.Trainers, "Id", "Name", sessionReservationcs.TrainerId);
+            ViewData["TrainerId"] = new SelectList(_context.Trainers, "Id", "FirstName", sessionReservationcs.TrainerId);
             ViewData["StudentId"] = new SelectList(_context.Students, "ID", "Name", sessionReservationcs.StudentId);
 
             return View(sessionReservationcs);
