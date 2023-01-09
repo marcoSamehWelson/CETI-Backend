@@ -3,6 +3,8 @@ using Caritas_Egypt_Backend.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Caritas_Egypt_Backend.Controllers
@@ -19,6 +21,23 @@ namespace Caritas_Egypt_Backend.Controllers
 
         public IActionResult ServicesReport(ServiceReportFilter serviceReportFilter)
         {
+           ServiceReportResult res = new ServiceReportResult();
+      
+
+            if (serviceReportFilter.FromDate == null) {
+
+
+                ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name");
+                ViewData["ServiceId"] = new SelectList(_context.Services, "Id", "Name");
+
+
+
+
+
+
+                return View(res);
+
+            }
             //Get Session Reservation with filters
             var ServiceRep = _context.SessionReservation.Include(s => s.student).Include(s => s.coursePrice).ThenInclude(s => s.service).Include(s => s.coursePrice).ThenInclude(s => s.branch).Where(s => s.SessionDateTime >= serviceReportFilter.FromDate && s.SessionDateTime <= serviceReportFilter.ToDate);
             if (!string.IsNullOrWhiteSpace(serviceReportFilter.ServiceID.ToString()))
@@ -28,10 +47,21 @@ namespace Caritas_Egypt_Backend.Controllers
             if (!string.IsNullOrWhiteSpace(serviceReportFilter.BranchID.ToString()))
             {
                 ServiceRep = ServiceRep.Where(sc => sc.coursePrice.BranchId == serviceReportFilter.BranchID);
+                ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name", serviceReportFilter.BranchID);
+
+            }
+            else {
+                ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name");
+
             }
             if (serviceReportFilter.FromAge.HasValue && serviceReportFilter.FromAge.Value >= 0)
             {
                 ServiceRep = ServiceRep.Where(com => com.student.Age >= serviceReportFilter.FromAge.Value);
+                ViewData["ServiceId"] = new SelectList(_context.Services, "Id", "Name",serviceReportFilter.ServiceID);
+            }
+            else {
+
+                ViewData["ServiceId"] = new SelectList(_context.Services, "Id", "Name");
             }
 
             if (serviceReportFilter.ToAge.HasValue && serviceReportFilter.ToAge.Value >= 0)
@@ -39,49 +69,114 @@ namespace Caritas_Egypt_Backend.Controllers
                 ServiceRep = ServiceRep.Where(com => com.student.Age <= serviceReportFilter.ToAge.Value);
             }
 
+            var x = 0;
 
-            ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name");
-            ViewData["ServiceId"] = new SelectList(_context.Services, "Id", "Name");
+         var  result= ServiceRep.ToList();
+            for (var i=0; i< result.Count; i++)
+
+            {
+                x += Int32.Parse(result[i].coursePrice.Price);
+            }
+            res.TotalIncome = x;
+            res.TotalBeneficiaries = result.Count;
+            res.ServiceName = _context.Services.Where(x => x.Id == serviceReportFilter.ServiceID).First().Name;
+            res.BranchName = _context.Branches.Where(x => x.Id == serviceReportFilter.BranchID).First().Name;
+            res.FromAge = serviceReportFilter.FromAge.Value;
+            res.ToAge = serviceReportFilter.ToAge.Value;
+            res.FromDate = serviceReportFilter.FromDate.Value;
+            res.ToDate = serviceReportFilter.ToDate.Value;
 
 
 
 
 
 
-            return View();
+
+
+            return View(res);
         }
         public IActionResult DisabilitiesReport(DisabilitiesReportFilter disabilitiesReportFilter)
         {
+            DisabilitiesReportResult res = new DisabilitiesReportResult();
+
+
+            if (disabilitiesReportFilter.FromDate == null)
+            {
+
+
+                ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name");
+                ViewData["TypeOfDisabilityId"] = new SelectList(_context.TypeOfDisabilitys, "Id", "Name");
+
+
+
+
+
+                return View(res);
+
+            }
             //Get Session Reservation with filters
-            var ServiceRep = _context.SessionReservation.Include(s => s.student).Include(s => s.student).ThenInclude(s => s.TypeOfDisability).Include(s => s.coursePrice).ThenInclude(s => s.branch).Where(s => s.SessionDateTime >= disabilitiesReportFilter.FromDate && s.SessionDateTime <= disabilitiesReportFilter.ToDate);
+            var disabilitiesRep = _context.SessionReservation.Include(s => s.student).Include(s => s.student).ThenInclude(s => s.TypeOfDisability).Include(s => s.coursePrice).ThenInclude(s => s.branch).Where(s => s.SessionDateTime >= disabilitiesReportFilter.FromDate && s.SessionDateTime <= disabilitiesReportFilter.ToDate);
             if (!string.IsNullOrWhiteSpace(disabilitiesReportFilter.TypeOfDisabilityID.ToString()))
             {
-                ServiceRep = ServiceRep.Where(sc => sc.student.TypeOfDisabilityId == disabilitiesReportFilter.TypeOfDisabilityID);
+                disabilitiesRep = disabilitiesRep.Where(sc => sc.student.TypeOfDisabilityId == disabilitiesReportFilter.TypeOfDisabilityID);
+                ViewData["TypeOfDisabilityId"] = new SelectList(_context.TypeOfDisabilitys, "Id", "Name", disabilitiesReportFilter.TypeOfDisabilityID);
+
+            }
+            else {
+                ViewData["TypeOfDisabilityId"] = new SelectList(_context.TypeOfDisabilitys, "Id", "Name");
+
+
             }
             if (!string.IsNullOrWhiteSpace(disabilitiesReportFilter.BranchID.ToString()))
             {
-                ServiceRep = ServiceRep.Where(sc => sc.coursePrice.BranchId == disabilitiesReportFilter.BranchID);
+                disabilitiesRep = disabilitiesRep.Where(sc => sc.coursePrice.BranchId == disabilitiesReportFilter.BranchID);
+                ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name",disabilitiesReportFilter.BranchID);
+
+            }
+            else
+            {
+
+                ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name");
+
             }
             if (disabilitiesReportFilter.FromAge.HasValue && disabilitiesReportFilter.FromAge.Value >= 0)
             {
-                ServiceRep = ServiceRep.Where(com => com.student.Age >= disabilitiesReportFilter.FromAge.Value);
+                disabilitiesRep = disabilitiesRep.Where(com => com.student.Age >= disabilitiesReportFilter.FromAge.Value);
             }
 
             if (disabilitiesReportFilter.ToAge.HasValue && disabilitiesReportFilter.ToAge.Value >= 0)
             {
-                ServiceRep = ServiceRep.Where(com => com.student.Age <= disabilitiesReportFilter.ToAge.Value);
+                disabilitiesRep = disabilitiesRep.Where(com => com.student.Age <= disabilitiesReportFilter.ToAge.Value);
             }
 
 
-            ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name");
-            ViewData["TypeOfDisabilityId"] = new SelectList(_context.TypeOfDisabilitys, "Id", "Name");
+
+
+            var x = 0;
+
+            var result = disabilitiesRep.ToList();
+            for (var i = 0; i < result.Count; i++)
+
+            {
+                x += Int32.Parse(result[i].coursePrice.Price);
+            }
+            res.TotalIncome = x;
+            res.TotalBeneficiaries = result.Count;
+            res.TypeOfDisabilityName = _context.TypeOfDisabilitys.Where(x => x.Id == disabilitiesReportFilter.TypeOfDisabilityID).First().Name;
+            res.BranchName = _context.Branches.Where(x => x.Id == disabilitiesReportFilter.BranchID).First().Name;
+            res.FromAge = disabilitiesReportFilter.FromAge.Value;
+            res.ToAge = disabilitiesReportFilter.ToAge.Value;
+            res.FromDate = disabilitiesReportFilter.FromDate.Value;
+            res.ToDate = disabilitiesReportFilter.ToDate.Value;
 
 
 
 
 
 
-            return View();
+
+
+            return View(res);
         }
         public IActionResult SecDisabilitiesReport(SecDisabilitiesReportFilter secDisabilitiesReportFilter)
         {

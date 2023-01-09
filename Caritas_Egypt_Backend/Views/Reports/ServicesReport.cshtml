@@ -1,4 +1,4 @@
-﻿@model Caritas_Egypt_Backend.ViewModels.ServiceReportFilter
+﻿@model Caritas_Egypt_Backend.ViewModels.ServiceReportResult
 
 <div class="card card-custom col-md-12">
  <div class="card-header">
@@ -10,7 +10,7 @@
 
   <div class="card-body">
 
-   <form asp-action="Reports">
+        <form asp-action="ServicesReport">
             <div asp-validation-summary="ModelOnly" class="text-danger" dir="rtl"></div>
          <div class="row">
             <div class="form-group col-md-4">
@@ -43,10 +43,70 @@
                     <input asp-for="ToAge" class="form-control" />
                     <span asp-validation-for="ToAge" class="text-danger"></span>
             </div>
+                <div class="form-group col-md-4">
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                </div>
             </div>
    
 
             </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FromDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ToDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TotalBeneficiaries)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FullAge)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ServiceName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TotalIncome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BranchName)
+                    </th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                 <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => Model.FromDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => Model.ToDate)
+                        </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => Model.TotalBeneficiaries)
+                        </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => Model.FullAge)
+                        </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.ServiceName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.TotalIncome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.BranchName)
+                    </td>
+               
+                     
+                    </tr>
+            </tbody>
+        </table>
+
    </div>
 
   </div>
