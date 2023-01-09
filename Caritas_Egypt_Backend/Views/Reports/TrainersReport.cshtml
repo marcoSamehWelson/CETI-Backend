@@ -1,0 +1,57 @@
+﻿@model Caritas_Egypt_Backend.ViewModels.TrainersReportFilter
+
+<div class="card card-custom col-md-12">
+    <div class="card-header">
+        <h3 class="card-title">
+            Service Reports
+        </h3>
+    </div>
+    <!--begin::Form-->
+
+    <div class="card-body">
+
+        <form asp-action="Reports">
+            <div asp-validation-summary="ModelOnly" class="text-danger" dir="rtl"></div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label asp-for="FromDate" class="col-form-label"></label>
+                    <input asp-for="FromDate" class="form-control" />
+                    <span asp-validation-for="FromDate" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="ToDate" class="col-form-label"></label>
+                    <input asp-for="ToDate" class="form-control" />
+                    <span asp-validation-for="ToDate" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="ServiceID" class="control-label"></label>
+                    <select asp-for="ServiceID" class="form-control" asp-items="ViewBag.ServiceId"></select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label asp-for="BranchID" class="control-label"></label>
+                    <select asp-for="BranchID" class="form-control" asp-items="ViewBag.BranchId"></select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="FromAge" class="col-form-label"></label>
+                    <input asp-for="FromAge" class="form-control" />
+                    <span asp-validation-for="FromAge" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="ToAge" class="col-form-label"></label>
+                    <input asp-for="ToAge" class="form-control" />
+                    <span asp-validation-for="ToAge" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label asp-for="TrainerID" class="control-label"></label>
+                    <select asp-for="TrainerID" class="form-control" asp-items="ViewBag.TrainerId"></select>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</div>

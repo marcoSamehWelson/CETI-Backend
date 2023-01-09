@@ -72,6 +72,11 @@ namespace Caritas_Egypt_Backend.Migrations
                     b.Property<Guid?>("BranchId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
                     b.Property<string>("Price")
                         .HasColumnType("nvarchar(max)");
 

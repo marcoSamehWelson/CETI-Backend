@@ -12,6 +12,10 @@ namespace Caritas_Egypt_Backend.Models
         [Required]
         [Key]
         public Guid Id { get; set; }
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "الاسم")]
+        public string Name { get; set; }
         //Added By Peter
         public Guid? ServiceId { get; set; }
         public Service service { get; set; }
