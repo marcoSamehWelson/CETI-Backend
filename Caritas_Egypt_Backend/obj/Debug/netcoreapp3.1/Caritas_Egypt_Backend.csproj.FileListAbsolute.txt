@@ -526,3 +526,4 @@ F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\n
 F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Caritas_Egypt_Backend.dll
 F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Caritas_Egypt_Backend.pdb
 F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Caritas_Egypt_Backend.genruntimeconfig.cache
+F:\peter\Sho4l\Repos\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Debug\netcoreapp3.1\Razor\Views\Reports\Reports.cshtml.g.cs
