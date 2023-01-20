@@ -22,14 +22,14 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4" >
                 <label asp-for="DateOfBirth" class="col-form-label"></label>
-                <input asp-for="DateOfBirth" class="form-control" />
+                <input  id="dob" type="text" disabled="disabled" asp-for="DateOfBirth" class="form-control" />
                 <span asp-validation-for="DateOfBirth" class="text-danger"></span>
             </div>
             <div class="form-group col-md-4">
                 <label asp-for="Age" class="col-form-label"></label>
-                <input asp-for="Age" class="form-control" />
+                <input id="age" asp-for="Age" class="form-control" />
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
             </div>
@@ -50,9 +50,9 @@
             </div>
             </div>
               <div class="row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4" >
                 <label asp-for="NationalID" class="col-form-label"></label>
-                <input asp-for="NationalID" class="form-control" />
+                <input asp-for="NationalID" id="id-num"  onchange="getDob()" class="form-control" />
                 <span asp-validation-for="NationalID" class="text-danger"></span>
             </div>
             <div class="form-group col-md-4">
@@ -60,15 +60,20 @@
                 <input asp-for="PhoneNumber" class="form-control" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
-              
-            
-            <div class="form-group col-md-4 form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="InSchool" /> @Html.DisplayNameFor(model => model.InSchool)
+            </div>
+              <div class="row" >
+              <div class="form-group col-md-4 form-check">
+                <label class="form-check-label" for="checkbox-2">
+                    <input type="checkbox" id="checkbox-2" onclick="myFun()" class="form-check-input" asp-for="GotAJobPlacement" /> @Html.DisplayNameFor(model => model.GotAJobPlacement)
+                </label>
+            </div>
+              <div class="form-group col-md-4 form-check">
+                <label class="form-check-label" for="checkbox-1">
+                    <input type="checkbox" id="checkbox-1" onclick="myFunction()" class="form-check-input" asp-for="InSchool" /> @Html.DisplayNameFor(model => model.InSchool)
                 </label>
             </div>
             </div>
-              <div class="row">
+              <div class="row" style="display: none;" id="label-1">
             <div class="form-group col-md-4">
                 <label asp-for="SchoolName" class="col-form-label"></label>
                 <input asp-for="SchoolName" class="form-control" />
@@ -79,13 +84,8 @@
                 <input asp-for="SchoolYear" class="form-control" />
                 <span asp-validation-for="SchoolYear" class="text-danger"></span>
             </div>
-              <div class="form-group col-md-4 form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="GotAJobPlacement" /> @Html.DisplayNameFor(model => model.GotAJobPlacement)
-                </label>
             </div>
-            </div>
-              <div class="row">
+              <div class="row" style="display: none;" id="label-2">
               <div class="form-group col-md-4">
                 <label asp-for="JopType" class="col-form-label"></label>
                 <input asp-for="JopType" class="form-control" />
@@ -292,5 +292,61 @@
 </div>
 
 
+<script>
 
+      function myFunction() {
+  
+  var checkBox = document.getElementById("checkbox-1");
 
+  var text = document.getElementById("label-1");
+
+  
+  if (checkBox.checked == true){
+    text.style.display = "flex";
+  } else {
+    text.style.display = "none";
+  }
+}
+  function myFun() {
+  
+  var checkBx = document.getElementById("checkbox-2");
+
+  var tex = document.getElementById("label-2");
+
+  
+  if (checkBx.checked == true){
+    tex.style.display = "flex";
+  } else {
+    tex.style.display = "none";
+  }
+}
+function getDob() {
+          debugger;;
+
+  var idNumber = document.getElementById("id-num").value;
+    console.log(String(idNumber));
+   var Year = String(idNumber).substring(1, 3);
+       console.log(Year);
+
+   var Month =  String(idNumber).substring(3, 5)
+       console.log(Month);
+
+   var Day =  String(idNumber).substring(5, 7)
+          console.log(Day);
+
+   var cutoff = (new Date()).getFullYear() - 2000
+             console.log(cutoff);
+
+   var dob = (Year > cutoff ? '19' : '20') + Year + '/' + Month + '/' + Day;
+                console.log(cutoff);
+
+   document.getElementById("dob").value = dob
+   //get student age
+    var currentyear = new Date().getFullYear();
+    var yob = (Year > cutoff ? '19' : '20') + Year
+    var studentyear = currentyear - yob
+       document.getElementById("age").value = studentyear
+
+    return dob;
+}
+</script>
