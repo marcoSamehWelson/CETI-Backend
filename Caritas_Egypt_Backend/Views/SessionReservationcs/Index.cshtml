@@ -6,8 +6,8 @@
 }
 
 <div>
-    <h1>Session Reservations</h1>
-					<a class="btn btn-info font-weight-bolder font-size-sm mr-3" style="float : right;" asp-action="Create">Create</a>
+    <h1>حجز الجلسات</h1>
+					<a class="btn btn-info font-weight-bolder font-size-sm mr-3" style="float : right;" asp-action="Create">إنشاء</a>
                     </div>
 <table class="table">
     <thead>
@@ -23,6 +23,12 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.SessionDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InAttend)
+            </th>
+              <th>
+                @Html.DisplayNameFor(model => model.InAbsence)
             </th>
             <th></th>
         </tr>
@@ -42,10 +48,16 @@
             <td>
                 @Html.DisplayFor(modelItem => item.SessionDateTime)
             </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.InAttend)
+            </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.InAbsence)
+            </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">تعديل</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">تفاصيل</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">حذف</a>
             </td>
         </tr>
 }

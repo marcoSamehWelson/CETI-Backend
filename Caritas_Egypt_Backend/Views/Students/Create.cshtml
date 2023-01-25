@@ -7,8 +7,8 @@
 <div class="card card-custom col-md-12">
  <div class="card-header">
   <h3 class="card-title">
-   Create Student 
-  </h3>
+إنشاء
+</h3>
  </div>
  <!--begin::Form-->
 
@@ -16,12 +16,24 @@
   
    <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger" dir="rtl"></div>
-         <div class="row">
-            <div class="form-group col-md-4">
-                <label asp-for="Name" class="col-form-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+       <div class="row">
+                       <div class="form-group col-md-4">
+                <label asp-for="FirstName" class="col-form-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
+            <div class="form-group col-md-4">
+                <label asp-for="SecondName" class="col-form-label"></label>
+                <input asp-for="SecondName" class="form-control" />
+                <span asp-validation-for="SecondName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="LastName" class="col-form-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="row">
             <div class="form-group col-md-4" >
                 <label asp-for="DateOfBirth" class="col-form-label"></label>
                 <input  id="dob" type="text" disabled="disabled" asp-for="DateOfBirth" class="form-control" />
@@ -32,13 +44,13 @@
                 <input id="age" asp-for="Age" class="form-control" />
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
-            </div>
-              <div class="row">
-            <div class="form-group col-md-4">
+             <div class="form-group col-md-4">
                 <label asp-for="ServiceCardNumber" class="col-form-label"></label>
                 <input asp-for="ServiceCardNumber" class="form-control" />
                 <span asp-validation-for="ServiceCardNumber" class="text-danger"></span>
             </div>
+            </div>
+              <div class="row">           
             <div class="form-group col-md-4">
                 <label asp-for="TypeOfDisabilityId" class="col-form-label"></label>
                 <select asp-for="TypeOfDisabilityId" class ="form-control" asp-items="ViewBag.TypeOfDisabilityId"></select>
@@ -47,6 +59,11 @@
                 <label asp-for="Adress" class="col-form-label"></label>
                 <input asp-for="Adress" class="form-control" />
                 <span asp-validation-for="Adress" class="text-danger"></span>
+            </div>
+             <div class="form-group col-md-4">
+                <label asp-for="Governorate" class="col-form-label"></label>
+                <input asp-for="Governorate" class="form-control" />
+                <span asp-validation-for="Governorate" class="text-danger"></span>
             </div>
             </div>
               <div class="row">
@@ -61,7 +78,7 @@
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             </div>
-              <div class="row" >
+              <div class="row" >               
               <div class="form-group col-md-4 form-check">
                 <label class="form-check-label" for="checkbox-2">
                     <input type="checkbox" id="checkbox-2" onclick="myFun()" class="form-check-input" asp-for="GotAJobPlacement" /> @Html.DisplayNameFor(model => model.GotAJobPlacement)
@@ -277,7 +294,7 @@
 
              </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="إنشاء" class="btn btn-primary" />
             </div>
         </form>
    </div>
@@ -288,7 +305,7 @@
 
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">عودة إلي القائمة السابقة</a>
 </div>
 
 
@@ -350,3 +367,8 @@ function getDob() {
     return dob;
 }
 </script>
+@* <div class="form-group col-md-4">
+                <label asp-for="Name" class="col-form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>*@

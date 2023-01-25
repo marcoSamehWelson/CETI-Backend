@@ -333,6 +333,12 @@ namespace Caritas_Egypt_Backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<bool>("InAbsence")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("InAttend")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("SessionDateTime")
                         .HasColumnType("datetime2");
 
@@ -427,6 +433,9 @@ namespace Caritas_Egypt_Backend.Migrations
 
                     b.Property<bool>("GotAJobPlacement")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Governorate")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("InSchool")
                         .HasColumnType("bit");

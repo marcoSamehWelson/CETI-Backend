@@ -27,9 +27,10 @@ namespace Caritas_Egypt_Backend.Models
         [StringLength(50)]
         [Display(Name = "الاسم الثالث")]
         public string LastName { get; set; }
-        [Display(Name = "رقم التليفون ")]
+        [Display(Name = "رقم التليفون")]
 
         public int PhoneNumber { get; set; }
+        [Display(Name = "الاسم كامل")]
         public string Fullname => string.Format("{0} {1} {2}", FirstName, SecondName,LastName);
 
         [Display(Name = "الرقم القومى")]
@@ -40,7 +41,7 @@ namespace Caritas_Egypt_Backend.Models
         [Display(Name = "الفرع ")]
 
         public Guid BranchId { get; set; }
-        [Display(Name = "اسماء الخدمات التى يقدمها ")]
+        [Display(Name = "اسم الخدمة")]
 
         public Guid ServiceId { get; set; }
        

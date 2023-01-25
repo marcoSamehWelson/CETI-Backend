@@ -19,6 +19,8 @@ namespace Caritas_Egypt_Backend.Models
         public Guid? TypeOfDisabilityId { get; set; }
         [Display(Name = "عنوان السكن الحالى  ")]
         public string Adress { get; set; }
+        [Display(Name = "المحافظة")]
+        public string Governorate { get; set; }
         [Display(Name = "الرقم القومى")]
         public string NationalID { get; set; }
         [Display(Name = "رقم التليفون ")]
@@ -102,6 +104,11 @@ namespace Caritas_Egypt_Backend.Models
         public string FifthBrotherOrSisterPhoneNumber { get; set; }
         [Display(Name = "الرقم القومى للاخت او الاخ الخامس")]
         public string FifthBrotherOrSisterNationalID { get; set; }
+        [Display(Name = "نوع الإعاقة")]
         public TypeOfDisability TypeOfDisability { get; set; }
+        [Display(Name = "الاسم")]
+        public string Fullname => string.Format("{0} - {1} - {2}", FirstName, SecondName, LastName);
+        public string Fulladdress => string.Format("{0} - {1}", Adress, Governorate);
+        
     }
 }
