@@ -9105,11 +9105,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\pc\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Dell\\.nuget\\packages\\": {}
+>>>>>>> df50a4bf81973f521c33f9d1c1bfd74a49fca3b5
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "H:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
       "projectName": "Caritas_Egypt_Backend",
       "projectPath": "H:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
@@ -9118,6 +9123,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
+      "projectName": "Caritas_Egypt_Backend",
+      "projectPath": "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> df50a4bf81973f521c33f9d1c1bfd74a49fca3b5
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9211,7 +9226,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+>>>>>>> df50a4bf81973f521c33f9d1c1bfd74a49fca3b5
       }
     }
   },

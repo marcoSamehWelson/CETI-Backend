@@ -444,6 +444,7 @@ D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\media\logos\logo-letter-9.png
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\media\logos\logo-light.png
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\media\logos\Logo.png
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\media\logos\pngegg (2).png
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\media\logos\stars.png
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\media\misc\bg-1.jpg
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\assets\media\misc\bg-2.jpg

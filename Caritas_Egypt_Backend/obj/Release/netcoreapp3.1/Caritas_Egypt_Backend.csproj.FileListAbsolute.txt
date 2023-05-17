@@ -256,3 +256,10 @@ D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\Caritas_Egypt_Backend.dll
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\Caritas_Egypt_Backend.pdb
 D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\Caritas_Egypt_Backend.genruntimeconfig.cache
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\Razor\Views\Reports\BrothersReport.cshtml.g.cs
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\Razor\Views\Reports\DisabilitiesReport.cshtml.g.cs
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\Razor\Views\Reports\Reports.cshtml.g.cs
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\Razor\Views\Reports\secDisabilitiesReport.cshtml.g.cs
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\Razor\Views\Reports\SecTrainersReport.cshtml.g.cs
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\Razor\Views\Reports\ServicesReport.cshtml.g.cs
+D:\Marco\CETI_Backend\CETI-Backend\Caritas_Egypt_Backend\obj\Release\netcoreapp3.1\Razor\Views\Reports\TrainersReport.cshtml.g.cs

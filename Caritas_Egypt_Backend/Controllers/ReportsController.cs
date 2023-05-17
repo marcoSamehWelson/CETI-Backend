@@ -151,15 +151,9 @@ namespace Caritas_Egypt_Backend.Controllers
             {
                 disabilitiesRep = disabilitiesRep.Where(com => com.student.Age <= disabilitiesReportFilter.ToAge.Value);
             }
-
-
-
-
             var x = 0;
-
             var result = disabilitiesRep.ToList();
             for (var i = 0; i < result.Count; i++)
-
             {
                 x += Int32.Parse(result[i].coursePrice.Price);
             }
@@ -171,14 +165,6 @@ namespace Caritas_Egypt_Backend.Controllers
             res.ToAge = disabilitiesReportFilter.ToAge.Value;
             res.FromDate = disabilitiesReportFilter.FromDate.Value;
             res.ToDate = disabilitiesReportFilter.ToDate.Value;
-
-
-
-
-
-
-
-
             return View(res);
         }
         public IActionResult SecDisabilitiesReport(SecDisabilitiesReportFilter secDisabilitiesReportFilter)
@@ -235,7 +221,20 @@ namespace Caritas_Egypt_Backend.Controllers
                 disabilitiesRep = disabilitiesRep.Where(com => com.student.Age <= secDisabilitiesReportFilter.ToAge.Value);
             }
 
+            if (secDisabilitiesReportFilter.InSchool)
+            {
 
+                disabilitiesRep = disabilitiesRep.Where(com => com.student.InSchool == true);
+
+
+            }
+            else
+            {
+
+                disabilitiesRep = disabilitiesRep.Where(com => com.student.InSchool == false);
+
+
+            }
 
 
             var x = 0;
