@@ -12,16 +12,16 @@
 											<!--begin::Header-->
 											<div class="card-header border-0 py-5">
 												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label font-weight-bolder text-dark">Type Of Disabilities</span>
+													<span class="card-label font-weight-bolder text-dark">انواع الإعاقات</span>
 													<span class="text-muted mt-3 font-weight-bold font-size-sm"></span>
 												</h3>
 												<div class="card-toolbar" style="gap: 8px">
 													<form method="post" asp-action="Index" style="display:flex; gap:8px;">
 						<input type="text" name="name" value="" />
-						<input type="submit" value="Search" class="btn btn-info font-weight-bolder font-size-sm w-100" />
+						<input type="submit" value="بحث" class="btn btn-info font-weight-bolder font-size-sm w-100" />
 													 </form>
 
-													    <a class="btn btn-info font-weight-bolder font-size-sm mr-3" asp-action="Create">Create</a>
+													    <a class="btn btn-info font-weight-bolder font-size-sm mr-3" asp-action="Create">إنشاء</a>
 
 													
 													@*<a href="#" class="btn btn-danger font-weight-bolder font-size-sm">Create</a>*@
@@ -50,9 +50,9 @@
                                                                          </td>
     
                                                                          <td class="flex flex-col pl-0 py-2">
-                                                                             <a class="btn btn-info font-weight-bolder font-size-sm w-100" href="/TypeOfDisabilities/Edit?id=@item.Id">Edit</a>
-				                                                      <a class="btn btn-info font-weight-bolder font-size-sm w-100 mt-2" href="/TypeOfDisabilities/Details?id=@item.Id">Details</a>
-				                                                      <a class="btn btn-danger font-weight-bolder font-size-sm w-100 mt-2" href="/TypeOfDisabilities/Delete?id=@item.Id">Delete</a> 
+                                                                             <a class="btn btn-info font-weight-bolder font-size-sm w-100" href="/TypeOfDisabilities/Edit?id=@item.Id">تعديل</a>
+				                                                      <a class="btn btn-info font-weight-bolder font-size-sm w-100 mt-2" href="/TypeOfDisabilities/Details?id=@item.Id">تفاصيل</a>
+				                                                      <a class="btn btn-danger font-weight-bolder font-size-sm w-100 mt-2" href="/TypeOfDisabilities/Delete?id=@item.Id">حذف</a> 
                                                                          </td>
                                                                        </tr>
                                                                       }

@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>جنسيات الطلاب</h1>
 <div class="card-toolbar" style="gap: 8px; float:right;" >
 					<form method="post" asp-action="Index" style="display:flex; gap:8px;">
 						<input type="text" name="name" value="" />
-						<input type="submit" value="Search" class="btn btn-info font-weight-bolder w-100" />
-																	<a class="btn btn-info font-weight-bolder font-size-sm mr-3" asp-action="Create">Create</a>
+						<input type="submit" value="بحث" class="btn btn-info font-weight-bolder w-100" />
+																	<a class="btn btn-info font-weight-bolder font-size-sm mr-3" asp-action="Create">إنشاء</a>
 
                     </form>
 
@@ -36,9 +36,9 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">تعديل</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">تفاصيل</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">حذف</a>
             </td>
         </tr>
 }

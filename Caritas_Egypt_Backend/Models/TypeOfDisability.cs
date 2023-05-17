@@ -21,7 +21,7 @@ namespace Caritas_Egypt_Backend.Models
         public Guid Id { get; set; }
         [Required]
         [StringLength(50)]
-        [Display(Name = "TypeOfDisability")]
+        [Display(Name = "نوع الإعاقة")]
         public string Name { get; set; }
 
       

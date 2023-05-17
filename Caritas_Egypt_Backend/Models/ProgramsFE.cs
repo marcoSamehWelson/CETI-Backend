@@ -18,17 +18,16 @@ namespace Caritas_Egypt_Backend.Models
         public Guid Id { get; set; }
         [Required]
         [StringLength(50)]
-        [Display(Name = "عنوان")]
+        [Display(Name = "العنوان")]
         public string Tittle { get; set; }
         [StringLength(500)]
-        [Display(Name = "Descreption")]
+        [Display(Name = "الوصف")]
         public string Descreption { get; set; }
-        [Display(Name = "img")]
+        [Display(Name = "الصورة")]
         public string img { get; set; }
-     
-
-
+        [Display(Name = " فئة البرنامج")]
         public Guid? ProgramsCategoryFEId { get; set; }
+        [Display(Name = " فئة البرنامج")]
         public ProgramsCategoryFE programsCategoryFE { get; set; }
     }
 }

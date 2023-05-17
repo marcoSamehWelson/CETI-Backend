@@ -15,7 +15,7 @@ namespace Caritas_Egypt_Backend.Models
         public Guid Id { get; set; }
         [Required]
         [StringLength(50)]
-        [Display(Name = "الاسم ")]
+        [Display(Name = "جنسية الطالب")]
         public string Name { get; set; }
     }
 }
