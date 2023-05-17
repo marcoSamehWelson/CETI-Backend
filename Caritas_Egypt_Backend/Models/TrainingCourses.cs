@@ -16,17 +16,21 @@ namespace Caritas_Egypt_Backend.Models
         [Key]
         public Guid Id { get; set; }
         [Required]
-        [StringLength(50)]
-        [Display(Name = "Tittle")]
+        [StringLength(1000)]
+        [Display(Name = "العنوان")]
         public string Tittle { get; set; }
-        [StringLength(5000)]
-        [Display(Name = "Descreption")]
+        [StringLength(50000)]
+        [Display(Name = "الوصف")]
         public string Descreption { get; set; }
+        [Display(Name = "الصورة")]
         public string img { get; set; }
-        [Display(Name = "branch")]
+        [Display(Name = "الفرع")]
         public Guid? branchId { get; set; }
+        [Display(Name = "الفرع")]
         public Branch branch { get; set; }
+        [Display(Name = "من تاريخ")]
         public DateTime StartDate { get; set; }
+        [Display(Name = "إلى تاريخ")]
         public DateTime EndDate { get; set; }
 
 

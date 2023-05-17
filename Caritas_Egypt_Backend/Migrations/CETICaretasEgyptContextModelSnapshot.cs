@@ -160,12 +160,12 @@ namespace Caritas_Egypt_Backend.Migrations
 
                     b.Property<string>("Descreption")
                         .HasColumnType("nvarchar(max)")
-                        .HasMaxLength(5000);
+                        .HasMaxLength(50000);
 
                     b.Property<string>("Tittle")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
 
                     b.Property<string>("img")
                         .HasColumnType("nvarchar(max)");
@@ -182,16 +182,16 @@ namespace Caritas_Egypt_Backend.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Descreption")
-                        .HasColumnType("nvarchar(500)")
-                        .HasMaxLength(500);
+                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(50000);
 
                     b.Property<Guid?>("ProgramsCategoryFEId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Tittle")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
 
                     b.Property<string>("img")
                         .HasColumnType("nvarchar(max)");
@@ -211,12 +211,12 @@ namespace Caritas_Egypt_Backend.Migrations
 
                     b.Property<string>("Descreption")
                         .HasColumnType("nvarchar(max)")
-                        .HasMaxLength(5000);
+                        .HasMaxLength(50000);
 
                     b.Property<string>("Tittle")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
 
                     b.Property<string>("img")
                         .HasColumnType("nvarchar(max)");
@@ -243,7 +243,7 @@ namespace Caritas_Egypt_Backend.Migrations
 
                     b.Property<string>("Paragraph")
                         .HasColumnType("nvarchar(max)")
-                        .HasMaxLength(5000);
+                        .HasMaxLength(50000);
 
                     b.Property<string>("Partners")
                         .HasColumnType("nvarchar(max)");
@@ -256,8 +256,8 @@ namespace Caritas_Egypt_Backend.Migrations
 
                     b.Property<string>("Tittle")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
 
                     b.Property<string>("Year")
                         .HasColumnType("nvarchar(max)");
@@ -657,7 +657,7 @@ namespace Caritas_Egypt_Backend.Migrations
 
                     b.Property<string>("Descreption")
                         .HasColumnType("nvarchar(max)")
-                        .HasMaxLength(5000);
+                        .HasMaxLength(50000);
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
@@ -667,8 +667,8 @@ namespace Caritas_Egypt_Backend.Migrations
 
                     b.Property<string>("Tittle")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
 
                     b.Property<Guid?>("branchId")
                         .HasColumnType("uniqueidentifier");

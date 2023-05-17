@@ -16,10 +16,10 @@ namespace Caritas_Egypt_Backend.Models
         [Key]
         public Guid Id { get; set; }
         [Required]
-        [StringLength(50)]
+        [StringLength(1000)]
         [Display(Name = "العنوان")]
         public string Tittle { get; set; }
-        [StringLength(5000)]
+        [StringLength(50000)]
         [Display(Name = "الوصف")]
         public string Paragraph { get; set; }
         [Display(Name = "السنة")]
