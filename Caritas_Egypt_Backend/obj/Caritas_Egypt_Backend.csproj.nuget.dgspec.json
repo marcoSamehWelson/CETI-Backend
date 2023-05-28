@@ -1,22 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "H:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {}
-  },
-  "projects": {
-    "H:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "H:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
-        "projectName": "Caritas_Egypt_Backend",
-        "projectPath": "H:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "H:\\peter\\Sho4l\\Repos\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
     "D:\\Marco\\CETI_Backend\\CETI-Backend\\Caritas_Egypt_Backend\\Caritas_Egypt_Backend.csproj": {}
   },
   "projects": {
@@ -31,7 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> df50a4bf81973f521c33f9d1c1bfd74a49fca3b5
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,24 +82,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.32, 3.1.32]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -125,11 +90,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
->>>>>>> df50a4bf81973f521c33f9d1c1bfd74a49fca3b5
         }
       }
     }

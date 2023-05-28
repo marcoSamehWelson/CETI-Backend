@@ -21,7 +21,13 @@ namespace Caritas_Egypt_Backend.Controllers
         // GET: ProgramsFEs
         public async Task<IActionResult> Index()
         {
+        //    If Not IsNothing(LoginData) Then
+        //    Session("Page") = PageType.Shifts
+        //    Return View()
 
+        //Else
+        //    Return RedirectToAction("Logout", "Account", Nothing)
+        //End If
             var prog = await _context.ProgramsFEs.Include(s => s.programsCategoryFE).ToListAsync();
             return View(prog);
         }

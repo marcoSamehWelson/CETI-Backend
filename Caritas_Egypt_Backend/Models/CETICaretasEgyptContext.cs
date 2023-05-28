@@ -38,6 +38,9 @@ namespace Caritas_Egypt_Backend.Models
         public virtual DbSet<ProjectsFE> ProjectsFEs { get; set; }
         public virtual DbSet<DiscriptionList> DiscriptionLists { get; set; }
         public virtual DbSet<TrainingCourses> TrainingCoursess { get; set; }
+        public virtual DbSet<TrainingFE> TrainingFEs { get; set; }
+        public virtual DbSet<JobFE> JobFEs { get; set; }
+        
         
         protected void OnModuleCreating(ModelBuilder builder)
         {
