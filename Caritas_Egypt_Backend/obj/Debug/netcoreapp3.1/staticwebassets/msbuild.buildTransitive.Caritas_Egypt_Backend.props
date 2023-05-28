@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Caritas_Egypt_Backend.props" />
-</Project>

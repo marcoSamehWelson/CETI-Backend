@@ -15,7 +15,7 @@ namespace Caritas_Egypt_Backend.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.30")
+                .HasAnnotation("ProductVersion", "3.1.32")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -111,6 +111,29 @@ namespace Caritas_Egypt_Backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("DiscriptionLists");
+                });
+
+            modelBuilder.Entity("Caritas_Egypt_Backend.Models.JobFE", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Descreption")
+                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(5000);
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("img")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("JobFEs");
                 });
 
             modelBuilder.Entity("Caritas_Egypt_Backend.Models.Language", b =>
@@ -681,6 +704,29 @@ namespace Caritas_Egypt_Backend.Migrations
                     b.HasIndex("branchId");
 
                     b.ToTable("TrainingCoursess");
+                });
+
+            modelBuilder.Entity("Caritas_Egypt_Backend.Models.TrainingFE", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Descreption")
+                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(5000);
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("img")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TrainingFEs");
                 });
 
             modelBuilder.Entity("Caritas_Egypt_Backend.Models.TypeOfDisability", b =>
