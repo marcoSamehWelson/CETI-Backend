@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Caritas_Egypt_Backend.props" />
+</Project>
