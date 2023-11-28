@@ -6,6 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Caritas_Egypt_Backend.Models;
+using Caritas_Egypt_Backend.Enums;
+using Caritas_Egypt_Backend.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Caritas_Egypt_Backend.Controllers
 {
@@ -21,15 +28,16 @@ namespace Caritas_Egypt_Backend.Controllers
         // GET: ProgramsFEs
         public async Task<IActionResult> Index()
         {
-        //    If Not IsNothing(LoginData) Then
-        //    Session("Page") = PageType.Shifts
-        //    Return View()
 
-        //Else
-        //    Return RedirectToAction("Logout", "Account", Nothing)
-        //End If
-            var prog = await _context.ProgramsFEs.Include(s => s.programsCategoryFE).ToListAsync();
-            return View(prog);
+
+            if (HttpContext.Session.GetInt32("UserType") != null) {
+                var prog = await _context.ProgramsFEs.Include(s => s.programsCategoryFE).ToListAsync();
+                return View(prog);
+            }
+            else { 
+                return RedirectToAction("Logout", "Account" );
+            }
+
         }
 
         // GET: ProgramsFEs/Details/5
