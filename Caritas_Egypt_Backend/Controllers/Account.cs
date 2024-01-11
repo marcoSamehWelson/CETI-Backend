@@ -80,5 +80,14 @@ namespace Caritas_Egypt_Backend.Controllers
         {
             return _context.User.Any(e => e.Email == email && e.TempPassword==password);
         }
+
+
+        public ActionResult Logout()
+        {
+           
+            HttpContext.Session.Clear();
+            HttpContext.Session.Remove("LoggedData");
+            return RedirectToAction("Login", "Account");
+        }
     }
 }
