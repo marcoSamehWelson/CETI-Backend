@@ -4,14 +4,16 @@ using Caritas_Egypt_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Caritas_Egypt_Backend.Migrations
 {
     [DbContext(typeof(CETICaretasEgyptContext))]
-    partial class CETICaretasEgyptContextModelSnapshot : ModelSnapshot
+    [Migration("20240313203422_addserial")]
+    partial class addserial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -719,9 +721,6 @@ namespace Caritas_Egypt_Backend.Migrations
 
                     b.Property<string>("img")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("serial")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

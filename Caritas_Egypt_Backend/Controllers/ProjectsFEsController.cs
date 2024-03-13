@@ -56,7 +56,7 @@ namespace Caritas_Egypt_Backend.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Tittle,Paragraph,Year,Location,Objectives,Mainactivities,Partners,TargetgrouporBeneficiaries,ProjectsCategoryFEId")] ProjectsFE projectsFE)
+        public async Task<IActionResult> Create([Bind("Id,Tittle,Paragraph,Year,Location,Objectives,Mainactivities,Partners,TargetgrouporBeneficiaries,ProjectsCategoryFEId,serial")] ProjectsFE projectsFE)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace Caritas_Egypt_Backend.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Tittle,Paragraph,Year,Location,Objectives,Mainactivities,Partners,TargetgrouporBeneficiaries,ProjectsCategoryFEId")] ProjectsFE projectsFE)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Tittle,Paragraph,Year,Location,Objectives,Mainactivities,Partners,TargetgrouporBeneficiaries,ProjectsCategoryFEId,serial")] ProjectsFE projectsFE)
         {
             if (id != projectsFE.Id)
             {

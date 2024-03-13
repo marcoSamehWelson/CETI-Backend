@@ -72,7 +72,7 @@ namespace Caritas_Egypt_Backend.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Tittle,Descreption,img,ProgramsCategoryFEId")] ProgramsFE programsFE)
+        public async Task<IActionResult> Create([Bind("Id,Tittle,Descreption,img,ProgramsCategoryFEId,serial")] ProgramsFE programsFE)
         {
             if (ModelState.IsValid)
             {
@@ -109,7 +109,7 @@ namespace Caritas_Egypt_Backend.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Tittle,Descreption,img,ProgramsCategoryFEId")] ProgramsFE programsFE)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Tittle,Descreption,img,ProgramsCategoryFEId,serial")] ProgramsFE programsFE)
         {
             if (id != programsFE.Id)
             {

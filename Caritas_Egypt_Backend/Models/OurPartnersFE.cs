@@ -25,6 +25,9 @@ namespace Caritas_Egypt_Backend.Models
         public string Descreption { get; set; }
         [Display(Name = "الصورة")]
         public string img { get; set; }
+		[Display(Name = "تسلسل")]
 
-    }
+		public int serial { get; set; }
+
+	}
 }

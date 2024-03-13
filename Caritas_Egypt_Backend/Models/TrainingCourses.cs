@@ -32,7 +32,9 @@ namespace Caritas_Egypt_Backend.Models
         public DateTime StartDate { get; set; }
         [Display(Name = "إلى تاريخ")]
         public DateTime EndDate { get; set; }
+        [Display(Name = "تسلسل")]
 
+        public int serial { get; set; }
 
     }
 }

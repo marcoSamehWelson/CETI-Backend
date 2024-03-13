@@ -29,5 +29,8 @@ namespace Caritas_Egypt_Backend.Models
         public Guid? ProgramsCategoryFEId { get; set; }
         [Display(Name = " فئة البرنامج")]
         public ProgramsCategoryFE programsCategoryFE { get; set; }
-    }
+		[Display(Name = "تسلسل")]
+
+		public int serial { get; set; }
+	}
 }
